@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSTQB Advanced Level テストマネジメント 試験対策問題集</title>
+  <style>
+    body { font-family: "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.7; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.5rem; border-bottom: 2px solid #2563eb; padding-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    h3 { font-size: 1rem; color: #2563eb; }
+    .problem { margin: 2rem 0; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 8px; }
+    .scenario { background: #f8fafc; padding: 1rem; border-left: 4px solid #2563eb; margin: 1rem 0; }
+    .options { list-style: none; padding-left: 0; }
+    .options li { margin: 0.5rem 0; padding: 0.5rem; }
+    .meta { font-size: 0.8rem; color: #64748b; }
+    .toc { margin: 2rem 0; padding: 1rem; background: #f8fafc; }
+    .toc ul { list-style: none; padding-left: 1rem; }
+    .answer { margin: 2rem 0; padding: 1rem; border-bottom: 1px solid #e2e8f0; }
+    .correct-answer { color: #059669; }
+    .explanation { margin-top: 1rem; }
+    .page-break { page-break-before: always; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JSTQB Advanced Level テストマネジメント 試験対策問題集</h1>
+    <p>シラバス Version 3.0 準拠</p>
+    <p>全77問</p>
+  </header>
+
+  <section class="intro">
+    <h2>はじめに</h2>
+    <p>本書は、JSTQB Advanced Level テストマネジメント資格試験の対策を目的とした問題集です。ISTQB®テスト技術者資格制度 Advanced Level シラバス テストマネジメント Version 3.0 に準拠しています。</p>
+    <p>各問題は4択形式で、シナリオに基づく実践的な内容となっています。解答と解説は第2部にまとめてあります。</p>
+    <p><strong>推奨学習方法</strong></p>
+    <ul>
+      <li>シラバスを一読する</li>
+      <li>シラバスの学習目標と本書の問題を比較する</li>
+      <li>間違えた問題はシラバスに戻って復習する</li>
+    </ul>
+  </section>
+
+  <nav class="toc"><h2>問題一覧</h2><ul><li><strong>1. テスト活動のマネジメント</strong><ul><li><a href="#q-TM-001">TM-001 品質リスクに応じたテスト活動の選択として、最も適切なものはどれか？...</a></li><li><a href="#q-TM-002">TM-002 テスト完了の活動として、シラバスに記載されている4つの作業グループに含まれるもの...</a></li><li><a href="#q-TM-004">TM-004 ツール選定計画を立てる際に、テストマネージャが分析すべき観点として最も適切なもの...</a></li><li><a href="#q-TM-008">TM-008 ステークホルダーマトリクス（権力と関心度のマトリクス）において、「影響力が高いが...</a></li><li><a href="#q-TM-009">TM-009 スマートの法則を用いてテスト目的を定義する際、「M＝測定可能な」に該当する記述と...</a></li><li><a href="#q-TM-010">TM-010 ふりかえりの目的として、シラバスに記載されている内容に最も近いものはどれか？...</a></li><li><a href="#q-TM-011">TM-011 テスト計画に含まれる活動として、シラバスに沿って正しいものはどれか？...</a></li><li><a href="#q-TM-012">TM-012 テストコントロールの活動として正しいものはどれか？...</a></li><li><a href="#q-TM-013">TM-013 プロジェクトマネージャーがテストに関心を持つ主な理由として最も適切なものはどれか...</a></li><li><a href="#q-TM-014">TM-014 ハイブリッドモデルにおけるテストマネジメント活動として適切なものはどれか？...</a></li><li><a href="#q-TM-015">TM-015 イテレーティブ開発モデル（例：スクラム）におけるテスト見積りの特徴として正しいも...</a></li><li><a href="#q-TM-016">TM-016 コンポーネントテストにおけるテストマネジメント活動として正しいものはどれか？...</a></li><li><a href="#q-TM-017">TM-017 非機能テストのマネジメントの特徴として正しいものはどれか？...</a></li><li><a href="#q-TM-018">TM-018 リスクベースドテストでリスクに対応するために取る手段として、シラバスに含まれるも...</a></li><li><a href="#q-TM-019">TM-019 テストマネージャーがプロダクト品質リスクを識別するために使用できる技法の例として...</a></li><li><a href="#q-TM-020">TM-020 プロダクト品質に関するリスクレベルを決定する要因として正しいものはどれか？...</a></li><li><a href="#q-TM-021">TM-021 重量的なリスクベースドテスト技法の例として正しいものはどれか？...</a></li><li><a href="#q-TM-022">TM-022 リスクベースドテストの成功を測定する際の質問として適切なものはどれか？...</a></li><li><a href="#q-TM-023">TM-023 プロジェクトテスト戦略で選択する重要な決定事項に含まれるものはどれか？...</a></li><li><a href="#q-TM-024">TM-024 IDEALモデルの「D＝Diagnosing（診断）」フェーズで行うこととして正...</a></li><li><a href="#q-TM-025">TM-025 TPI NEXTモデルで定義されているものとして正しいものはどれか？...</a></li><li><a href="#q-TM-026">TM-026 分析ベースの改善アプローチの例として正しいものはどれか？...</a></li><li><a href="#q-TM-027">TM-027 ツール導入におけるよい実践として適切なものはどれか？...</a></li><li><a href="#q-TM-028">TM-028 ツールの種類を決定する際に考慮すべき側面として正しいものはどれか？...</a></li><li><a href="#q-TM-029">TM-029 ツールのライフサイクルに含まれるフェーズとして適切なものはどれか？...</a></li><li><a href="#q-TM-030">TM-030 ツールを利用したメトリクス収集と評価の利点として適切なものはどれか？...</a></li><li><a href="#q-TM-042">TM-042 このプロジェクトで優先すべきテストマネジメント活動として最も適切なものはどれか？...</a></li><li><a href="#q-TM-043">TM-043 組織的テスト戦略とプロジェクトコンテキストを分析した上で、最も適切なテストアプロ...</a></li><li><a href="#q-TM-044">TM-044 ふりかえりで実施すべきステップとして、シラバスに沿って正しいものはどれか？...</a></li><li><a href="#q-TM-048">TM-048 リスクレベルに応じた適切なテスト活動の選択として最も適切なものはどれか？...</a></li><li><a href="#q-TM-049">TM-049 ツール導入の意思決定のために、テストマネージャが実施すべき分析として最も適切なも...</a></li><li><a href="#q-TM-051">TM-051 テスト完了における「学んだ教訓」の実施方法として正しいものはどれか？...</a></li><li><a href="#q-TM-052">TM-052 擁護者（影響力が低い、関心が高い）への対応として適切なものはどれか？...</a></li><li><a href="#q-TM-053">TM-053 イテレーティブ開発モデルにおけるテストウェアの特徴として正しいものはどれか？...</a></li><li><a href="#q-TM-054">TM-054 受け入れテストにおけるテストマネジメント活動として正しいものはどれか？...</a></li><li><a href="#q-TM-055">TM-055 機能テストのマネジメントで重点を置くべきこととして正しいものはどれか？...</a></li><li><a href="#q-TM-056">TM-056 リスク分析に多様なステークホルダーを含めるべき理由として最も適切なものはどれか？...</a></li><li><a href="#q-TM-057">TM-057 軽量的なリスクベースドテスト技法の例として正しいものはどれか？...</a></li><li><a href="#q-TM-058">TM-058 スマートの法則の「R＝妥当な」に該当する記述として正しいものはどれか？...</a></li><li><a href="#q-TM-059">TM-059 TMMiの説明として正しいものはどれか？...</a></li><li><a href="#q-TM-060">TM-060 GQM（Goal-Question-Metric）アプローチの説明として正しいも...</a></li><li><a href="#q-TM-066">TM-066 イテレーティブ開発モデルにおけるテスト自動化の特徴として正しいものはどれか？...</a></li><li><a href="#q-TM-067">TM-067 リスクマネジメントが遭遇しがちな困難として、シラバスに記載されているものはどれか...</a></li><li><a href="#q-TM-068">TM-068 適切なテストアプローチを選択するために分析すべき要因として正しいものはどれか？...</a></li><li><a href="#q-TM-069">TM-069 IDEALモデルの行動フェーズで行うこととして正しいものはどれか？...</a></li><li><a href="#q-TM-074">TM-074 テスト計画を開始すべき時期として、シラバスに沿って正しいものはどれか？...</a></li><li><a href="#q-TM-075">TM-075 縦型探索（depth-first）の説明として正しいものはどれか？...</a></li><li><a href="#q-TM-076">TM-076 横型探索（breadth-first）の説明として正しいものはどれか？...</a></li></ul></li><li><strong>2. プロダクトのマネジメント</strong><ul><li><a href="#q-TM-003">TM-003 テストモニタリングとコントロールにおいて、ステークホルダーに提供すべき情報として...</a></li><li><a href="#q-TM-005">TM-005 テスト見積りにおいて、考慮すべき要因として最も適切なものはどれか？...</a></li><li><a href="#q-TM-006">TM-006 ハイブリッド・アジャイル環境における欠陥マネジメントで、テストマネージャが考慮す...</a></li><li><a href="#q-TM-031">TM-031 テストマネジメント活動のためのメトリクスの目的として適切なものはどれか？...</a></li><li><a href="#q-TM-032">TM-032 テスト工数に影響を与える可能性のある要因として適切なものはどれか？...</a></li><li><a href="#q-TM-033">TM-033 新規技術を用いるプロジェクトで、経験が不足している場合に適した見積り技法として適...</a></li><li><a href="#q-TM-034">TM-034 欠陥のライフサイクルにおいて、欠陥が通過する典型的な状態として正しいものはどれか...</a></li><li><a href="#q-TM-035">TM-035 アジャイルチームにおける欠陥マネジメントの特徴として適切なものはどれか？...</a></li><li><a href="#q-TM-036">TM-036 欠陥レポート情報として収集すべきデータに含まれるものはどれか？...</a></li><li><a href="#q-TM-045">TM-045 テスト報告において、ステークホルダーのニーズに合わせるために適切なものはどれか？...</a></li><li><a href="#q-TM-046">TM-046 欠陥レポート情報を用いたプロセス改善アクションとして最も適切なものはどれか？...</a></li><li><a href="#q-TM-050">TM-050 この状況で適用できる見積り技法の組み合わせとして最も適切なものはどれか？...</a></li><li><a href="#q-TM-061">TM-061 効率的なテストコントロールのために必要な枠組みに含まれるものとして正しいものはど...</a></li><li><a href="#q-TM-062">TM-062 テスト工数に影響を与える要因の例として適切なものはどれか？...</a></li><li><a href="#q-TM-063">TM-063 ハイブリッドソフトウェア開発における欠陥マネジメントの課題として適切なものはどれ...</a></li><li><a href="#q-TM-070">TM-070 効果的なテスト報告のために重要なこととして適切なものはどれか？...</a></li><li><a href="#q-TM-071">TM-071 ファンクションポイント法がテスト見積りに適用できる条件として適切なものはどれか？...</a></li><li><a href="#q-TM-072">TM-072 複数チームが関わるプロジェクトで機能横断的な欠陥マネジメントが重要な理由として適...</a></li><li><a href="#q-TM-077">TM-077 テストモニタリングに含まれる活動として正しいものはどれか？...</a></li></ul></li><li><strong>3. チームのマネジメント</strong><ul><li><a href="#q-TM-007">TM-007 テストチームメンバーに求められるスキルの分析において、シラバスが示す4つの能力領...</a></li><li><a href="#q-TM-037">TM-037 スキルアセスメントの目的として適切なものはどれか？...</a></li><li><a href="#q-TM-038">TM-038 テストチームのマネジメントに必要なスキルとして適切なものはどれか？...</a></li><li><a href="#q-TM-039">TM-039 テスト担当者のモチベーションを上げる要因として適切なものはどれか？...</a></li><li><a href="#q-TM-040">TM-040 品質コストを決定する4つのカテゴリに含まれるものとして正しいものはどれか？...</a></li><li><a href="#q-TM-041">TM-041 テストの費用対効果の関係を説明する際に考慮すべき要素として適切なものはどれか？...</a></li><li><a href="#q-TM-047">TM-047 テストの価値をステークホルダーに伝える際に考慮すべきこととして適切なものはどれか...</a></li><li><a href="#q-TM-064">TM-064 スキル開発計画の策定において考慮すべきこととして適切なものはどれか？...</a></li><li><a href="#q-TM-065">TM-065 テスト担当者のモチベーションを下げる要因の例として適切なものはどれか？...</a></li><li><a href="#q-TM-073">TM-073 「ソフトウェアテスト」の能力領域に含まれるスキルとして適切なものはどれか？...</a></li></ul></li></ul></nav>
+
+  <div class="page-break"></div>
+  <main class="problems"><h1>第1部 問題本文</h1><section class="chapter"><h2>1. テスト活動のマネジメント</h2>
+<div class="problem" id="q-TM-001">
+  <div class="meta">TM-001 | K3 | シラバス: TM-1.3.4</div>
+  <div class="scenario">金融機関A社では、法人向けオンラインバンキングシステムの新規開発を進めている。決済機能は初めて自社開発するため、不正送金や二重払いなどの品質リスクが高いと識別されている。一方、口座照会機能は既存システムの流用であり、リスクは低いと評価された。テストマネージャであるあなたは、限られたテスト工数で品質リスクを効果的に軽減する方針を検討している。</div>
+  <p class="question">品質リスクに応じたテスト活動の選択として、最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 全機能に均等にテスト工数を配分し、網羅性を重視する</li>
+    <li>B. 決済機能に重点を置き、静的テストと動的テストを組み合わせて早期に欠陥を検出する</li>
+    <li>C. 口座照会機能を優先してテストし、既存システムの安定性を確認する</li>
+    <li>D. 決済機能のテストは後工程に回し、まず口座照会機能のテストを完了させる</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-002">
+  <div class="meta">TM-002 | K2 | シラバス: TM-1.1.3</div>
+  <div class="scenario">テスト実行が完了し、終了基準が満たされた。テストマネージャであるあなたは、テスト完了の活動を実施する必要がある。</div>
+  <p class="question">テスト完了の活動として、シラバスに記載されている4つの作業グループに含まれるものとして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト計画書の作成、テストケースの設計、テスト実行、欠陥レポートの作成</li>
+    <li>B. テスト完了レポートの作成と承認、テストウェアの保管、テストウェアの引き渡し、テスト環境のクリーンアップ</li>
+    <li>C. リスク分析、テスト戦略の策定、テスト見積り、ステークホルダーへの報告</li>
+    <li>D. テスト条件の識別、テストケースの設計、テスト実装、テスト実行スケジュールの作成</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-004">
+  <div class="meta">TM-004 | K4 | シラバス: TM-1.6.3</div>
+  <div class="scenario">教育機関向けのLMS（学習管理システム）開発プロジェクトで、テスト自動化ツールの導入を検討している。現状は手動テストのみで、回帰テストに毎回2週間を要している。予算は限られており、ツールのライセンス費用と学習コストを考慮する必要がある。また、CI/CDパイプラインとの統合が求められている。</div>
+  <p class="question">ツール選定計画を立てる際に、テストマネージャが分析すべき観点として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. ツールのブランド名と人気度のみを基準に選定する</li>
+    <li>B. カバーできるリスク、導入コスト、期待される利点、既存環境との統合性を総合的に分析する</li>
+    <li>C. 最も高価なツールを選ぶことで品質が保証されると判断する</li>
+    <li>D. 開発チームの希望のみを優先し、テストチームの意見は無視する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-008">
+  <div class="meta">TM-008 | K2 | シラバス: TM-1.2.2</div>
+  <div class="scenario">テスト計画の策定において、ステークホルダーとの関係を考慮している。</div>
+  <p class="question">ステークホルダーマトリクス（権力と関心度のマトリクス）において、「影響力が高いが関心が低い」象限に該当するステークホルダーの説明として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 日々のタスクには強い関心を持たないが、リソース配置やプロジェクトの方向性に関する意思決定が重要である</li>
+    <li>B. 影響力も関心も低いため、テスト活動には関与しない</li>
+    <li>C. テスト戦略の形成に不可欠な主要な協力者である</li>
+    <li>D. 定性的なフィードバックのみを提供し、意思決定には関与しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-009">
+  <div class="meta">TM-009 | K3 | シラバス: TM-1.4.3</div>
+  <div class="scenario">医療機器の制御ソフトウェアのテスト計画書を作成している。規制要件を満たすため、測定可能なテスト目的と終了基準を定義する必要がある。</div>
+  <p class="question">スマートの法則を用いてテスト目的を定義する際、「M＝測定可能な」に該当する記述として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 曖昧な表現で「十分にテストする」と記載する</li>
+    <li>B. 数値化可能な進捗基準を持ち、達成状況を判断できるようにする</li>
+    <li>C. 達成不可能な目標を設定して品質を担保する</li>
+    <li>D. プロジェクトの目的と無関係な指標を設定する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-010">
+  <div class="meta">TM-010 | K2 | シラバス: TM-1.5.4</div>
+  <div class="scenario">スプリントの終了時に、テストチームでふりかえりを実施することになった。</div>
+  <p class="question">ふりかえりの目的として、シラバスに記載されている内容に最も近いものはどれか？</p>
+  <ul class="options">
+    <li>A. 個人の成績を評価し、給与に反映する</li>
+    <li>B. チームがやり方とコラボレーションをレビューし、学んだ教訓を把握し、改善のための変更と行動を決定する</li>
+    <li>C. プロジェクトの遅延の責任者を特定する</li>
+    <li>D. 次のスプリントのテストケース数を事前に決定する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-011">
+  <div class="meta">TM-011 | K2 | シラバス: TM-1.1.1</div>
+  <div class="scenario">テスト計画の活動について説明を求められている。</div>
+  <p class="question">テスト計画に含まれる活動として、シラバスに沿って正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト目的、テストアプローチ、テストスコープ、テストリソース、テストスケジュールを定義する</li>
+    <li>B. テスト実行のみを実施する</li>
+    <li>C. 欠陥修正の担当を開発に委譲する</li>
+    <li>D. テスト完了後に初めて計画を策定する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-012">
+  <div class="meta">TM-012 | K2 | シラバス: TM-1.1.2</div>
+  <div class="scenario">テストモニタリングとコントロールの違いを理解したい。</div>
+  <p class="question">テストコントロールの活動として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト計画書に対して実際の進捗を比較し、必要に応じて是正措置を実装する</li>
+    <li>B. テストケースの設計のみを行う</li>
+    <li>C. 欠陥の修正をテストチームが実施する</li>
+    <li>D. テスト計画は一度策定したら変更しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-013">
+  <div class="meta">TM-013 | K2 | シラバス: TM-1.2.1</div>
+  <div class="scenario">さまざまなステークホルダーがテストに関心を持つ理由を整理している。</div>
+  <p class="question">プロジェクトマネージャーがテストに関心を持つ主な理由として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. コードの実装詳細を確認するため</li>
+    <li>B. 要件を仕様化し、求められる品質レベルを定義し、テスト結果に基づいて判定を行うため</li>
+    <li>C. テストツールの操作を習得するため</li>
+    <li>D. 欠陥の修正作業を担当するため</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-014">
+  <div class="meta">TM-014 | K2 | シラバス: TM-1.2.3</div>
+  <div class="scenario">ハイブリッドソフトウェア開発モデルを採用するプロジェクトでテストを計画している。</div>
+  <p class="question">ハイブリッドモデルにおけるテストマネジメント活動として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 従来の方法論とアジャイル方法論の間を円滑に移行するためのチームの理解と能力を評価する</li>
+    <li>B. ウォーターフォールのみに固執し、アジャイル要素を排除する</li>
+    <li>C. テスト計画を一切行わず、その場の判断のみで進める</li>
+    <li>D. ステークホルダーとのコミュニケーションを最小限に抑える</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-015">
+  <div class="meta">TM-015 | K2 | シラバス: TM-1.2.4</div>
+  <div class="scenario">シーケンシャル開発モデルとイテレーティブ開発モデルの違いを理解したい。</div>
+  <p class="question">イテレーティブ開発モデル（例：スクラム）におけるテスト見積りの特徴として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. テストレベルごとの早期詳細見積りのみを行う</li>
+    <li>B. イテレーションごとのストーリープランニングの一部としてイテレーティブに見積る</li>
+    <li>C. プロジェクト終了時に一括で見積る</li>
+    <li>D. 見積りは行わず、工数は無制限とする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-016">
+  <div class="meta">TM-016 | K2 | シラバス: TM-1.2.5</div>
+  <div class="scenario">コンポーネントテストのマネジメント活動を検討している。</div>
+  <p class="question">コンポーネントテストにおけるテストマネジメント活動として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. コンポーネントテストのスコープ、目的、完了基準を定義する</li>
+    <li>B. システムテストのみを計画し、コンポーネントテストは無視する</li>
+    <li>C. 開発者に一切関与させず、テストチームのみで実施する</li>
+    <li>D. 完了基準を設定せず、時間が来たら終了する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-017">
+  <div class="meta">TM-017 | K2 | シラバス: TM-1.2.6</div>
+  <div class="scenario">非機能テストのマネジメントについて検討している。</div>
+  <p class="question">非機能テストのマネジメントの特徴として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 性能やセキュリティといったシステム属性の検証を中心に展開する</li>
+    <li>B. 機能要件の網羅のみを重視する</li>
+    <li>C. 非機能要件はテスト対象外とする</li>
+    <li>D. 手動テストのみで実施し、ツールは使用しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-018">
+  <div class="meta">TM-018 | K2 | シラバス: TM-1.3.1</div>
+  <div class="scenario">リスクベースドテストにおいてリスクに対応する手段を理解したい。</div>
+  <p class="question">リスクベースドテストでリスクに対応するために取る手段として、シラバスに含まれるものはどれか？</p>
+  <ul class="options">
+    <li>A. リスク分析（リスク識別・アセスメント）とリスクコントロール（モニタリング・軽減）</li>
+    <li>B. リスクを無視して均等にテストする</li>
+    <li>C. 高リスク領域を意図的にスキップする</li>
+    <li>D. リスク分析はプロジェクト終了時のみ行う</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-019">
+  <div class="meta">TM-019 | K2 | シラバス: TM-1.3.2</div>
+  <div class="scenario">プロダクト品質リスクを識別する技法を検討している。</div>
+  <p class="question">テストマネージャーがプロダクト品質リスクを識別するために使用できる技法の例として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 専門家へのインタビュー、過去の経験の活用、チェックリスト</li>
+    <li>B. くじ引きでリスクを決定する</li>
+    <li>C. 開発者のみに聞き、ステークホルダーは関与させない</li>
+    <li>D. リスク識別は行わず、全機能を均等にテストする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-020">
+  <div class="meta">TM-020 | K2 | シラバス: TM-1.3.3</div>
+  <div class="scenario">プロダクト品質のリスクレベルを決定する要因を理解したい。</div>
+  <p class="question">プロダクト品質に関するリスクレベルを決定する要因として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. リスク影響とリスク可能性</li>
+    <li>B. チームの人数のみ</li>
+    <li>C. オフィスの広さ</li>
+    <li>D. 使用するプログラミング言語の種類のみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-021">
+  <div class="meta">TM-021 | K2 | シラバス: TM-1.3.5</div>
+  <div class="scenario">リスクベースドテストの技法を重量的と軽量的に区別したい。</div>
+  <p class="question">重量的なリスクベースドテスト技法の例として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. ハザード分析、FMEA、フォールトツリー解析</li>
+    <li>B. 直感のみに基づく判断</li>
+    <li>C. くじ引きによる優先度付け</li>
+    <li>D. 軽量的技法のみを使用する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-022">
+  <div class="meta">TM-022 | K2 | シラバス: TM-1.3.6</div>
+  <div class="scenario">リスクベースドテストの成功メトリクスについて検討している。</div>
+  <p class="question">リスクベースドテストの成功を測定する際の質問として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 優先度の高い欠陥のほとんどは、テスト実行の早い段階で発見されたか？</li>
+    <li>B. テストを実施しなかったか？</li>
+    <li>C. リスク分析は行わなかったか？</li>
+    <li>D. ステークホルダーは一切関与しなかったか？</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-023">
+  <div class="meta">TM-023 | K2 | シラバス: TM-1.4.1</div>
+  <div class="scenario">テストアプローチの典型的な選択肢を理解したい。</div>
+  <p class="question">プロジェクトテスト戦略で選択する重要な決定事項に含まれるものはどれか？</p>
+  <ul class="options">
+    <li>A. 静的テスト、動的テスト、テストレベル、テストタイプ、テスト技法の選択</li>
+    <li>B. 社員の休暇スケジュールのみ</li>
+    <li>C. オフィスのレイアウト</li>
+    <li>D. 給与体系</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-024">
+  <div class="meta">TM-024 | K2 | シラバス: TM-1.5.1</div>
+  <div class="scenario">IDEALモデルを用いたテストプロセス改善を計画している。</div>
+  <p class="question">IDEALモデルの「D＝Diagnosing（診断）」フェーズで行うこととして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 現在のテストプロセスをアセスメントし、改善の可能性を特定する</li>
+    <li>B. 改善を開始せずに現状維持する</li>
+    <li>C. チームメンバーを解雇する</li>
+    <li>D. テストを実施しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-025">
+  <div class="meta">TM-025 | K2 | シラバス: TM-1.5.2</div>
+  <div class="scenario">TMMiやTPI NEXTを用いたモデルベースの改善を検討している。</div>
+  <p class="question">TPI NEXTモデルで定義されているものとして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 16のキーエリアと、各キーエリアについて4つの成熟度レベル</li>
+    <li>B. テストの実施を禁止するルール</li>
+    <li>C. プログラミング言語の規格</li>
+    <li>D. ハードウェアのスペック</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-026">
+  <div class="meta">TM-026 | K2 | シラバス: TM-1.5.3</div>
+  <div class="scenario">分析ベースのテストプロセス改善を検討している。</div>
+  <p class="question">分析ベースの改善アプローチの例として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 根本原因分析、GQMアプローチ、メトリクスを用いた分析</li>
+    <li>B. 占いによる意思決定</li>
+    <li>C. ランダムな変更の実施</li>
+    <li>D. データを収集しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-027">
+  <div class="meta">TM-027 | K2 | シラバス: TM-1.6.1</div>
+  <div class="scenario">ツール導入のベストプラクティスを検討している。</div>
+  <p class="question">ツール導入におけるよい実践として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. パイロット実施を行い、段階的に導入する</li>
+    <li>B. 全社員に一斉に強制導入し、トレーニングは行わない</li>
+    <li>C. ROIを評価せずに高額ツールを購入する</li>
+    <li>D. 既存プロセスとの整合性を考慮しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-028">
+  <div class="meta">TM-028 | K2 | シラバス: TM-1.6.2</div>
+  <div class="scenario">ツール選定において技術的側面とビジネス的側面を検討している。</div>
+  <p class="question">ツールの種類を決定する際に考慮すべき側面として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 技術的側面（統合性、サポート等）とビジネス的側面（コスト、ROI等）</li>
+    <li>B. ツールの色とデザインのみ</li>
+    <li>C. 販売員の印象のみ</li>
+    <li>D. 他社が使っているからという理由のみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-029">
+  <div class="meta">TM-029 | K2 | シラバス: TM-1.6.4</div>
+  <div class="scenario">ツールのライフサイクルを理解したい。</div>
+  <p class="question">ツールのライフサイクルに含まれるフェーズとして適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 選定、導入、運用、退役</li>
+    <li>B. 購入のみ</li>
+    <li>C. 廃棄のみ</li>
+    <li>D. ライフサイクルは存在しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-030">
+  <div class="meta">TM-030 | K2 | シラバス: TM-1.6.5</div>
+  <div class="scenario">ツールを利用したメトリクス収集について検討している。</div>
+  <p class="question">ツールを利用したメトリクス収集と評価の利点として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 自動化により効率的にデータを収集し、客観的な評価が可能になる</li>
+    <li>B. メトリクス収集は不可能になる</li>
+    <li>C. データの信頼性が低下する</li>
+    <li>D. 手動のみが正確である</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-042">
+  <div class="meta">TM-042 | K4 | シラバス: TM-1.2.7</div>
+  <div class="scenario">通信会社の料金計算システムで、V字モデルとアジャイルを組み合わせたハイブリッド開発を採用している。テストマネージャとして、計画・モニタリング・コントロールに重点を置いた活動を決定する必要がある。</div>
+  <p class="question">このプロジェクトで優先すべきテストマネジメント活動として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. ハイブリッドの各フェーズに応じた開始基準・終了基準を定義し、両モデルの成果物をトレースする仕組みを確立する</li>
+    <li>B. 計画は行わず、その場の判断のみで進める</li>
+    <li>C. モニタリングを省略する</li>
+    <li>D. ステークホルダーへの報告を一切行わない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-043">
+  <div class="meta">TM-043 | K4 | シラバス: TM-1.4.2</div>
+  <div class="scenario">製造業向けの生産管理システムで、組織的テスト戦略はリスクベースドテストを推奨している。一方、本プロジェクトはFDA規制対象の医療機器連携機能を含み、規格準拠が必須である。予算とスケジュールは厳しい。</div>
+  <p class="question">組織的テスト戦略とプロジェクトコンテキストを分析した上で、最も適切なテストアプローチの組み合わせはどれか？</p>
+  <ul class="options">
+    <li>A. リスクベースドテストに加え、規制準拠のためのプロセス準拠戦略を組み合わせ、高リスク領域に重点を配分する</li>
+    <li>B. テストを実施しない</li>
+    <li>C. 規制を無視してリスクベースドのみで進める</li>
+    <li>D. 全機能に均等配分し、規制要件は後回しにする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-044">
+  <div class="meta">TM-044 | K3 | シラバス: TM-1.5.4</div>
+  <div class="scenario">前回リリースで、回帰テストの不足により本番障害が発生した。テストマネージャとして、ふりかえりで改善領域を発見する必要がある。</div>
+  <p class="question">ふりかえりで実施すべきステップとして、シラバスに沿って正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. データの収集、インサイトの生成、改善アクションの決定</li>
+    <li>B. 責任者のみを追及する</li>
+    <li>C. 議事録を取らずに終了する</li>
+    <li>D. 改善は決定せず現状維持とする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-048">
+  <div class="meta">TM-048 | K3 | シラバス: TM-1.3.4</div>
+  <div class="scenario">ゲーム会社の課金システムで、決済処理は高リスク、UIの色変更は低リスクと評価された。リソースが限られている。</div>
+  <p class="question">リスクレベルに応じた適切なテスト活動の選択として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 決済処理に静的・動的テストを重点配分し、UIはサンプリングテストに留める</li>
+    <li>B. UIを最優先し、決済は後回しにする</li>
+    <li>C. 全機能を均等にテストする</li>
+    <li>D. 決済のテストを省略する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-049">
+  <div class="meta">TM-049 | K4 | シラバス: TM-1.6.3</div>
+  <div class="scenario">ECサイトで、決済・在庫・検索の3機能がある。回帰テストに3週間かかっている。自動化ツールの導入で2週間に短縮できる見込みだが、初期投資と学習コストが課題である。</div>
+  <p class="question">ツール導入の意思決定のために、テストマネージャが実施すべき分析として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 現状コスト、導入後のコスト、短縮される工数、リスク軽減効果を試算し、ROIを評価する</li>
+    <li>B. ツールの宣伝文句のみを信じて導入する</li>
+    <li>C. 分析せずに直感で決める</li>
+    <li>D. 最も安いツールを選ぶのみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-051">
+  <div class="meta">TM-051 | K2 | シラバス: TM-1.1.3</div>
+  <div class="scenario">学んだ教訓を文書化する活動について理解したい。</div>
+  <p class="question">テスト完了における「学んだ教訓」の実施方法として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. ふりかえりで議論し文書化し、テストプロセス改善に活用する</li>
+    <li>B. 教訓は記録しない</li>
+    <li>C. 個人の責任追及のみを行う</li>
+    <li>D. プロジェクト終了後5年経ってから記録する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-052">
+  <div class="meta">TM-052 | K2 | シラバス: TM-1.2.2</div>
+  <div class="scenario">「擁護者」タイプのステークホルダーへの対応を検討している。</div>
+  <p class="question">擁護者（影響力が低い、関心が高い）への対応として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 定期的な報告や特定の議論への関与を通じて関心を維持する</li>
+    <li>B. 完全に無視する</li>
+    <li>C. 毎日詳細な承認を求める</li>
+    <li>D. 関与の機会を一切与えない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-053">
+  <div class="meta">TM-053 | K2 | シラバス: TM-1.2.4</div>
+  <div class="scenario">アジャイルプロジェクトにおけるテストウェアの特徴を理解したい。</div>
+  <p class="question">イテレーティブ開発モデルにおけるテストウェアの特徴として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 受け入れ基準と完了の定義に重点を置き、文書化は最小限にとどめる</li>
+    <li>B. 詳細なテスト計画書を事前に全て作成する</li>
+    <li>C. テストウェアは作成しない</li>
+    <li>D. ISO標準の全項目を網羅した文書を必須とする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-054">
+  <div class="meta">TM-054 | K2 | シラバス: TM-1.2.5</div>
+  <div class="scenario">受け入れテストのマネジメント活動を検討している。</div>
+  <p class="question">受け入れテストにおけるテストマネジメント活動として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. ステークホルダーと協力し、受け入れ基準の充足のレビューと確認を行い、UATをマネジメントする</li>
+    <li>B. 開発チームのみで実施し、ユーザーは関与させない</li>
+    <li>C. 受け入れ基準を定義しない</li>
+    <li>D. UATは実施しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-055">
+  <div class="meta">TM-055 | K2 | シラバス: TM-1.2.6</div>
+  <div class="scenario">機能テストのマネジメントについて検討している。</div>
+  <p class="question">機能テストのマネジメントで重点を置くべきこととして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. すべての機能性が徹底的にテストされ、定義した要件を満たしていることを確認する</li>
+    <li>B. 非機能要件のみをテストする</li>
+    <li>C. 機能要件はテスト対象外とする</li>
+    <li>D. サンプルのみをテストする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-056">
+  <div class="meta">TM-056 | K2 | シラバス: TM-1.3.1</div>
+  <div class="scenario">リスク分析に多様なステークホルダーを含める理由を理解したい。</div>
+  <p class="question">リスク分析に多様なステークホルダーを含めるべき理由として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 最も効果的にするため、多様な視点と知見を活用できる</li>
+    <li>B. ステークホルダーは関与させない方が良い</li>
+    <li>C. テストチームのみで十分である</li>
+    <li>D. 開発者のみの意見で十分である</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-057">
+  <div class="meta">TM-057 | K2 | シラバス: TM-1.3.5</div>
+  <div class="scenario">軽量的なリスクベースドテスト技法の例を理解したい。</div>
+  <p class="question">軽量的なリスクベースドテスト技法の例として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. PRAM、PRISMA、チェックリストベースの分析</li>
+    <li>B. FMEAのみ</li>
+    <li>C. フォールトツリー解析のみ</li>
+    <li>D. 重量的技法のみを使用する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-058">
+  <div class="meta">TM-058 | K2 | シラバス: TM-1.4.3</div>
+  <div class="scenario">スマートの法則の各要素を理解したい。</div>
+  <p class="question">スマートの法則の「R＝妥当な」に該当する記述として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. プロジェクト全体の目的に沿ったものでなければならない</li>
+    <li>B. 曖昧でよい</li>
+    <li>C. 測定不可能でよい</li>
+    <li>D. 達成不可能でよい</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-059">
+  <div class="meta">TM-059 | K2 | シラバス: TM-1.5.2</div>
+  <div class="scenario">TMMiモデルについて理解したい。</div>
+  <p class="question">TMMiの説明として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 5つの成熟度レベルで構成され、テストプロセス領域と改善ゴールを含む</li>
+    <li>B. プログラミング言語の規格である</li>
+    <li>C. ハードウェアのスペックである</li>
+    <li>D. 1つのレベルしかない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-060">
+  <div class="meta">TM-060 | K2 | シラバス: TM-1.5.3</div>
+  <div class="scenario">GQMアプローチについて理解したい。</div>
+  <p class="question">GQM（Goal-Question-Metric）アプローチの説明として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 測定ゴールを定義し、それを質問に洗練し、質問に答えるメトリクスを選択する</li>
+    <li>B. メトリクスは不要である</li>
+    <li>C. ゴールは設定しない</li>
+    <li>D. ステークホルダーのニーズは考慮しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-066">
+  <div class="meta">TM-066 | K2 | シラバス: TM-1.2.4</div>
+  <div class="scenario">アジャイルにおけるテスト自動化の特徴を理解したい。</div>
+  <p class="question">イテレーティブ開発モデルにおけるテスト自動化の特徴として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. CI/CDにおける自動リグレッションに重点を置き、初期段階から組み込まれている</li>
+    <li>B. 自動化は一切行わない</li>
+    <li>C. プロジェクト終了時のみ自動化する</li>
+    <li>D. 手動テストのみを実施する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-067">
+  <div class="meta">TM-067 | K2 | シラバス: TM-1.3.6</div>
+  <div class="scenario">リスクベースドテストの困難さについて理解したい。</div>
+  <p class="question">リスクマネジメントが遭遇しがちな困難として、シラバスに記載されているものはどれか？</p>
+  <ul class="options">
+    <li>A. リスクレベルのアセスメントが困難、適切な開始の軽視、重要なリスクの見逃し</li>
+    <li>B. 困難は存在しない</li>
+    <li>C. ツールが高すぎるのみ</li>
+    <li>D. チームが大きすぎるのみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-068">
+  <div class="meta">TM-068 | K2 | シラバス: TM-1.4.2</div>
+  <div class="scenario">プロジェクトテスト戦略に影響する要因を理解したい。</div>
+  <p class="question">適切なテストアプローチを選択するために分析すべき要因として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. ドメイン、組織のゴール、プロジェクトのゴール、テストリソース、SDLCモデル</li>
+    <li>B. オフィスの立地のみ</li>
+    <li>C. チームの服装のみ</li>
+    <li>D. 予算は考慮しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-069">
+  <div class="meta">TM-069 | K2 | シラバス: TM-1.5.1</div>
+  <div class="scenario">IDEALモデルの「A＝Acting（行動）」フェーズを理解したい。</div>
+  <p class="question">IDEALモデルの行動フェーズで行うこととして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. テストプロセス改善計画書を実装し、トレーニングとパイロット実施、展開を行う</li>
+    <li>B. 何も行動しない</li>
+    <li>C. 計画を作成するのみで実装しない</li>
+    <li>D. 改善を中止する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-074">
+  <div class="meta">TM-074 | K2 | シラバス: TM-1.1.1</div>
+  <div class="scenario">テスト計画の開始時期について理解したい。</div>
+  <p class="question">テスト計画を開始すべき時期として、シラバスに沿って正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 開発プロセスのできるだけ早い段階、できれば要件を識別する前に開始すべきである</li>
+    <li>B. コーディングが完了してから開始する</li>
+    <li>C. テスト実行の前日に開始する</li>
+    <li>D. プロジェクト終了後に開始する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-075">
+  <div class="meta">TM-075 | K2 | シラバス: TM-1.3.4</div>
+  <div class="scenario">縦型探索と横型探索の違いを理解したい。</div>
+  <p class="question">縦型探索（depth-first）の説明として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 高リスクのテストをすべて、低リスクのテストよりも先に実行する</li>
+    <li>B. 低リスクを優先する</li>
+    <li>C. ランダムな順序で実行する</li>
+    <li>D. テストは実行しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-076">
+  <div class="meta">TM-076 | K2 | シラバス: TM-1.3.4</div>
+  <div class="scenario">横型探索の特徴を理解したい。</div>
+  <p class="question">横型探索（breadth-first）の説明として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 各リスクに対して少なくとも1つのテストを最優先とし、ステークホルダーが全体像を早期に把握できるようにする</li>
+    <li>B. 1つのリスクのみを徹底的にテストする</li>
+    <li>C. リスクを無視する</li>
+    <li>D. テスト順序は考慮しない</li>
+  </ul>
+</div></section><section class="chapter"><h2>2. プロダクトのマネジメント</h2>
+<div class="problem" id="q-TM-003">
+  <div class="meta">TM-003 | K3 | シラバス: TM-2.1.2</div>
+  <div class="scenario">医療機関向けの患者管理システムのシステムテストを実施している。テストマネージャであるあなたは、プロジェクトステークホルダーにテスト進捗を報告するためのメトリクスを検討している。現在、テスト実行率は85%だが、高リスクと識別された処方箋連携機能で複数の重大な欠陥が未解決のままである。</div>
+  <p class="question">テストモニタリングとコントロールにおいて、ステークホルダーに提供すべき情報として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト実行率のみを報告し、数値で進捗の良さを伝える</li>
+    <li>B. 未対応のリスク、欠陥ステータス、テスト実行ステータス、カバレッジを統合し、リリース判断に必要な情報を提供する</li>
+    <li>C. 欠陥数を隠して報告し、リリース遅延を避ける</li>
+    <li>D. テスト完了後に一括でレポートを作成し、詳細を報告する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-005">
+  <div class="meta">TM-005 | K3 | シラバス: TM-2.2.1</div>
+  <div class="scenario">小売業向けの在庫管理システムの新バージョン開発において、テストマネージャであるあなたはテスト工数の見積りを求められている。前回のバージョンアップでは、新機能のテストに加え、既存機能の回帰テスト、不具合修正後の再テストに想定以上の工数がかかった。今回も同様の構成で開発が進んでいる。</div>
+  <p class="question">テスト見積りにおいて、考慮すべき要因として最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 新機能のテスト工数のみを見積もれば十分である</li>
+    <li>B. 新機能テスト、回帰テスト、欠陥修正後の再テスト、テスト環境の準備など、テストプロセス全体の活動を含める</li>
+    <li>C. 開発チームの見積りをそのまま採用し、テスト側の検証は不要である</li>
+    <li>D. 過去の実績を無視し、直感のみで見積もる</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-006">
+  <div class="meta">TM-006 | K3 | シラバス: TM-2.3.2</div>
+  <div class="scenario">物流会社の荷物追跡システムをアジャイル開発している。複数のスクラムチームが並行して開発しており、欠陥は各チームのバックログで管理されている。テストマネージャであるあなたは、組織横断的な欠陥の可視化と品質トレンドの把握が課題だと感じている。</div>
+  <p class="question">ハイブリッド・アジャイル環境における欠陥マネジメントで、テストマネージャが考慮すべきこととして最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 欠陥管理は開発チームに任せ、テストマネージャは関与しない</li>
+    <li>B. チーム間で欠陥情報を共有し、共通のワークフローと分類基準を定義して、組織横断的な欠陥分析を可能にする</li>
+    <li>C. 欠陥レポートは作成せず、口頭での報告のみとする</li>
+    <li>D. 欠陥の優先度付けは行わず、発見順にすべて修正する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-031">
+  <div class="meta">TM-031 | K2 | シラバス: TM-2.1.1</div>
+  <div class="scenario">テストマネジメント活動のためのメトリクスを定義している。</div>
+  <p class="question">テストマネジメント活動のためのメトリクスの目的として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト計画、モニタリング、コントロール、完了の意思決定を支援する</li>
+    <li>B. メトリクスは不要である</li>
+    <li>C. 開発者のみが参照する</li>
+    <li>D. プロジェクト終了後にのみ収集する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-032">
+  <div class="meta">TM-032 | K2 | シラバス: TM-2.2.2</div>
+  <div class="scenario">テスト工数に影響を与える要因を分析している。</div>
+  <p class="question">テスト工数に影響を与える可能性のある要因として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. プロダクトの複雑さ、品質リスク、利用可能なリソース、SDLCモデル</li>
+    <li>B. オフィスの温度のみ</li>
+    <li>C. チームの服装</li>
+    <li>D. 曜日のみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-033">
+  <div class="meta">TM-033 | K2 | シラバス: TM-2.2.3</div>
+  <div class="scenario">テスト見積り技法の選択を検討している。</div>
+  <p class="question">新規技術を用いるプロジェクトで、経験が不足している場合に適した見積り技法として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. ワイドバンドデルファイ法で複数専門家の意見を収集する</li>
+    <li>B. 直感のみで見積る</li>
+    <li>C. 前回と全く同じ工数とする</li>
+    <li>D. 見積りを行わない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-034">
+  <div class="meta">TM-034 | K2 | シラバス: TM-2.3.1</div>
+  <div class="scenario">欠陥のライフサイクルを理解したい。</div>
+  <p class="question">欠陥のライフサイクルにおいて、欠陥が通過する典型的な状態として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 新規、割り当て済み、修正済み、クローズなど</li>
+    <li>B. 存在しない</li>
+    <li>C. 開くのみで閉じない</li>
+    <li>D. 修正のみで記録しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-035">
+  <div class="meta">TM-035 | K2 | シラバス: TM-2.3.3</div>
+  <div class="scenario">アジャイルチームにおける欠陥マネジメントの特徴を理解したい。</div>
+  <p class="question">アジャイルチームにおける欠陥マネジメントの特徴として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 欠陥はバックログアイテムとして管理され、優先度に基づいて対応される</li>
+    <li>B. 欠陥は記録しない</li>
+    <li>C. すべての欠陥をリリース後に一括対応する</li>
+    <li>D. 欠陥の優先度付けは行わない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-036">
+  <div class="meta">TM-036 | K2 | シラバス: TM-2.3.5</div>
+  <div class="scenario">欠陥レポートに含めるべき情報を検討している。</div>
+  <p class="question">欠陥レポート情報として収集すべきデータに含まれるものはどれか？</p>
+  <ul class="options">
+    <li>A. 欠陥の識別子、ステータス、重大度、発生箇所、再現手順</li>
+    <li>B. 報告者の身長と体重</li>
+    <li>C. オフィスの住所のみ</li>
+    <li>D. データは収集しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-045">
+  <div class="meta">TM-045 | K3 | シラバス: TM-2.1.3</div>
+  <div class="scenario">公共機関向けの申請システムで、テスト報告をステークホルダーに提供している。議会への説明資料も必要である。</div>
+  <p class="question">テスト報告において、ステークホルダーのニーズに合わせるために適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. ステークホルダーの役割に応じた詳細度と形式で、リリース判断に必要な情報を提供する</li>
+    <li>B. 技術的な生データのみをそのまま渡す</li>
+    <li>C. 報告は行わない</li>
+    <li>D. 虚偽の報告を行う</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-046">
+  <div class="meta">TM-046 | K3 | シラバス: TM-2.3.6</div>
+  <div class="scenario">欠陥レポートの統計分析から、要件レビューの不備が根本原因として多く識別された。</div>
+  <p class="question">欠陥レポート情報を用いたプロセス改善アクションとして最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 要件レビューのプロセスを強化し、チェックリストとトレーニングを導入する</li>
+    <li>B. 欠陥データを無視する</li>
+    <li>C. テストを減らして欠陥を隠す</li>
+    <li>D. 開発者を責めるのみでプロセスは変更しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-050">
+  <div class="meta">TM-050 | K3 | シラバス: TM-2.2.1</div>
+  <div class="scenario">保険会社の見積りシステムで、前回類似プロジェクトの実績がある。今回は新規規制対応機能が追加される。</div>
+  <p class="question">この状況で適用できる見積り技法の組み合わせとして最も適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 組織のデータ蓄積とメトリクスをベースに、新規部分はワイドバンドデルファイで補足する</li>
+    <li>B. 直感のみで見積る</li>
+    <li>C. 前回と全く同じ工数とする</li>
+    <li>D. 見積りを行わない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-061">
+  <div class="meta">TM-061 | K2 | シラバス: TM-2.1.2</div>
+  <div class="scenario">テストモニタリングに必要な尺度と目標値について検討している。</div>
+  <p class="question">効率的なテストコントロールのために必要な枠組みに含まれるものとして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト作業成果物やリソースの状況を計画書や戦略の目的に関連付けるための尺度や目標値</li>
+    <li>B. 尺度や目標値は不要である</li>
+    <li>C. 計画書との関連付けは不要である</li>
+    <li>D. モニタリングは行わない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-062">
+  <div class="meta">TM-062 | K2 | シラバス: TM-2.2.2</div>
+  <div class="scenario">テスト工数に影響する要因の例を理解したい。</div>
+  <p class="question">テスト工数に影響を与える要因の例として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. ドメインの複雑さ、新技術の使用、チームの経験、テスト環境の可用性</li>
+    <li>B. 天気のみ</li>
+    <li>C. 曜日のみ</li>
+    <li>D. オフィスの広さのみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-063">
+  <div class="meta">TM-063 | K2 | シラバス: TM-2.3.4</div>
+  <div class="scenario">ハイブリッド開発における欠陥マネジメントの課題を理解したい。</div>
+  <p class="question">ハイブリッドソフトウェア開発における欠陥マネジメントの課題として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 異なるライフサイクルモデル間で欠陥ワークフローを調整する必要がある</li>
+    <li>B. 欠陥は発生しない</li>
+    <li>C. 課題は存在しない</li>
+    <li>D. 欠陥管理は不要である</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-070">
+  <div class="meta">TM-070 | K2 | シラバス: TM-2.1.3</div>
+  <div class="scenario">テスト報告の形式について検討している。</div>
+  <p class="question">効果的なテスト報告のために重要なこととして適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. プロジェクトやビジネスのステークホルダーにとって理解しやすく、関連性のある形で伝える</li>
+    <li>B. 技術的な生データのみを渡す</li>
+    <li>C. 報告は行わない</li>
+    <li>D. 虚偽の数値を報告する</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-071">
+  <div class="meta">TM-071 | K2 | シラバス: TM-2.2.3</div>
+  <div class="scenario">ファンクションポイント法の適用場面を理解したい。</div>
+  <p class="question">ファンクションポイント法がテスト見積りに適用できる条件として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 機能要件が明確に定義されており、ファンクションポイントで規模を算出できる場合</li>
+    <li>B. 要件が全く存在しない場合</li>
+    <li>C. 非機能要件のみの場合</li>
+    <li>D. プロジェクトが存在しない場合</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-072">
+  <div class="meta">TM-072 | K2 | シラバス: TM-2.3.2</div>
+  <div class="scenario">機能横断的な欠陥マネジメントの必要性を理解したい。</div>
+  <p class="question">複数チームが関わるプロジェクトで機能横断的な欠陥マネジメントが重要な理由として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 組織全体の品質状況を把握し、改善に活かすため</li>
+    <li>B. 欠陥は各チームで完結すれば十分である</li>
+    <li>C. 欠陥のトレンド分析は不要である</li>
+    <li>D. 経営層への報告は不要である</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-077">
+  <div class="meta">TM-077 | K2 | シラバス: TM-2.1.2</div>
+  <div class="scenario">テストモニタリングに含まれる活動を理解したい。</div>
+  <p class="question">テストモニタリングに含まれる活動として正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト結果の収集と記録、計画したテストからの逸脱の識別、新たなリスクの識別と分析</li>
+    <li>B. テスト計画のみを行う</li>
+    <li>C. モニタリングは不要である</li>
+    <li>D. 欠陥の修正のみを行う</li>
+  </ul>
+</div></section><section class="chapter"><h2>3. チームのマネジメント</h2>
+<div class="problem" id="q-TM-007">
+  <div class="meta">TM-007 | K2 | シラバス: TM-3.1.2</div>
+  <div class="scenario">新規プロジェクトにテストチームを編成することになった。テストマネージャであるあなたは、必要なスキルを分析する必要がある。</div>
+  <p class="question">テストチームメンバーに求められるスキルの分析において、シラバスが示す4つの能力領域に含まれるものとして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. ソフトウェアシステムの使用、ドメインおよびビジネスに関する知識、システム開発領域、ソフトウェアテストのみ</li>
+    <li>B. ソフトウェアシステムの使用、ドメインおよびビジネスに関する知識、システム開発領域、ソフトウェアテスト、対人関係スキル</li>
+    <li>C. プログラミング言語の習熟度のみ</li>
+    <li>D. プロジェクトマネジメント資格の保有のみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-037">
+  <div class="meta">TM-037 | K2 | シラバス: TM-3.1.3</div>
+  <div class="scenario">テストチームメンバーのスキルアセスメントを実施する。</div>
+  <p class="question">スキルアセスメントの目的として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. チームメンバーの強みと弱みを分析し、トレーニング計画に活用する</li>
+    <li>B. 給与の減額の根拠とする</li>
+    <li>C. 解雇の理由を探す</li>
+    <li>D. アセスメントは行わない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-038">
+  <div class="meta">TM-038 | K2 | シラバス: TM-3.1.5</div>
+  <div class="scenario">テストチームがうまくいくために必要なマネジメントスキルを検討している。</div>
+  <p class="question">テストチームのマネジメントに必要なスキルとして適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. コミュニケーション、リーダーシップ、コンフリクト解決、モチベーション</li>
+    <li>B. プログラミングのみ</li>
+    <li>C. デザインのみ</li>
+    <li>D. マネジメントスキルは不要</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-039">
+  <div class="meta">TM-039 | K2 | シラバス: TM-3.1.6</div>
+  <div class="scenario">テスト担当者のモチベーションを高める要因を検討している。</div>
+  <p class="question">テスト担当者のモチベーションを上げる要因として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 明確な目標、成長機会、適切なフィードバック、チームでの協働</li>
+    <li>B. 過度な残業の強要</li>
+    <li>C. 成果の無視</li>
+    <li>D. コミュニケーションの遮断</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-040">
+  <div class="meta">TM-040 | K2 | シラバス: TM-3.2.1</div>
+  <div class="scenario">品質コストについてステークホルダーに説明する必要がある。</div>
+  <p class="question">品質コストを決定する4つのカテゴリに含まれるものとして正しいものはどれか？</p>
+  <ul class="options">
+    <li>A. 予防コスト、評価コスト、内部失敗コスト、外部失敗コスト</li>
+    <li>B. 人件費のみ</li>
+    <li>C. 設備費のみ</li>
+    <li>D. 広告費のみ</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-041">
+  <div class="meta">TM-041 | K2 | シラバス: TM-3.2.2</div>
+  <div class="scenario">テストの費用対効果についてビジネスケースを作成している。</div>
+  <p class="question">テストの費用対効果の関係を説明する際に考慮すべき要素として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. テストコスト、早期欠陥検出の利点、リリース後の欠陥修正コスト</li>
+    <li>B. オフィスの家賃のみ</li>
+    <li>C. 従業員の通勤時間のみ</li>
+    <li>D. テストは費用対効果を考慮しない</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-047">
+  <div class="meta">TM-047 | K3 | シラバス: TM-3.2.2</div>
+  <div class="scenario">新規プロジェクトのキックオフで、テストのビジネス価値を経営層に説明する必要がある。</div>
+  <p class="question">テストの価値をステークホルダーに伝える際に考慮すべきこととして適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 品質コストをベースに、定量的・定性的要素を考慮した価値を見積り、ステークホルダーが理解できる形で伝える</li>
+    <li>B. 技術用語のみで説明する</li>
+    <li>C. 数値は一切示さない</li>
+    <li>D. テストの価値は説明不要とする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-064">
+  <div class="meta">TM-064 | K2 | シラバス: TM-3.1.4</div>
+  <div class="scenario">テストチームメンバーのスキル開発を計画している。</div>
+  <p class="question">スキル開発計画の策定において考慮すべきこととして適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. アセスメント結果に基づき、ギャップを埋めるためのトレーニングと実践機会を計画する</li>
+    <li>B. トレーニングは不要である</li>
+    <li>C. 全員に同じトレーニングを強制するのみ</li>
+    <li>D. スキル開発は個人任せとする</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-065">
+  <div class="meta">TM-065 | K2 | シラバス: TM-3.1.6</div>
+  <div class="scenario">モチベーションを下げる要因を理解したい。</div>
+  <p class="question">テスト担当者のモチベーションを下げる要因の例として適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. 曖昧な目標、成長機会の欠如、不当な批判、孤立した作業</li>
+    <li>B. 明確な目標設定</li>
+    <li>C. 適切なフィードバック</li>
+    <li>D. チームでの協働</li>
+  </ul>
+</div>
+<div class="problem" id="q-TM-073">
+  <div class="meta">TM-073 | K2 | シラバス: TM-3.1.1</div>
+  <div class="scenario">テストチームに求められる4つの能力領域を詳細に理解したい。</div>
+  <p class="question">「ソフトウェアテスト」の能力領域に含まれるスキルとして適切なものはどれか？</p>
+  <ul class="options">
+    <li>A. テスト技法、テスト設計、テスト自動化、欠陥管理</li>
+    <li>B. 営業スキルのみ</li>
+    <li>C. 経理スキルのみ</li>
+    <li>D. テストは不要である</li>
+  </ul>
+</div></section></main>
+
+  <div class="page-break"></div>
+  <main class="answers"><h1>第2部 解答と解説</h1>
+<div class="answer" id="a-TM-001">
+  <h3>TM-001</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.4では、リスクレベルに応じた適切なテスト活動の選択が求められる。決済機能は品質リスクが高く、不正送金や二重払いは重大な影響があるため、重点的にテストすべきである。静的テスト（レビュー）で設計段階の欠陥を早期に検出し、動的テストで実行時動作を検証する組み合わせが効果的である。<br>【不正解の理由】Aはリスクを考慮していないため不適切。Cはリスクが低い機能を優先しており逆である。Dは高リスク機能を後回しにしており、重大な欠陥の早期発見を逃す可能性がある。</div>
+</div>
+<div class="answer" id="a-TM-002">
+  <h3>TM-002</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.1.3「テスト完了の活動」では、以下の4つの作業が定義されている：(1)テスト完了レポートを作成し承認する、(2)テストウェアを保管する、(3)テストウェアを引き渡す、(4)テスト環境をクリーンアップし、学んだ教訓を実施／収集／文書化する。選択肢Bはこれに該当する。<br>【不正解の理由】Aはテスト計画・設計・実行の活動であり、テスト完了ではない。Cはテスト計画の活動である。Dはテスト分析・設計・実装の活動である。</div>
+</div>
+<div class="answer" id="a-TM-003">
+  <h3>TM-003</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.1.2では、モニタリング・コントロール・完了のため、未対応のリスク、欠陥ステータス、テスト実行ステータス、テストカバレッジステータス、確信度合いの観点でテスト結果を分析・レポートし、ステークホルダーがリリースを決定するための判断材料を提供することが求められる。<br>【不正解の理由】Aは部分的な情報のみで、高リスク機能の欠陥状況が伝わらない。Cは倫理的に問題があり、誤ったリリース判断を招く。Dは継続的なモニタリングの原則に反し、適切なコントロールができない。</div>
+</div>
+<div class="answer" id="a-TM-004">
+  <h3>TM-004</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.6.3では、ツールの選択、カバーできるリスク、コスト、利点を考慮した計画を立てるために特定の状況を分析することが求められる。リスク軽減効果、ROI、既存インフラとの整合性を総合的に評価する必要がある。<br>【不正解の理由】Aは主観的で分析が不十分。Cはコストと効果のバランスを無視している。Dはステークホルダー分析に反し、テストチームの知見を活用していない。</div>
+</div>
+<div class="answer" id="a-TM-005">
+  <h3>TM-005</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.2.1では、テストに関する活動の見積りが求められる。テスト計画、分析、設計、実装、実行、完了の全活動に加え、回帰テストや欠陥修正後の再テスト、環境準備など、テストプロセス全体を考慮する必要がある。<br>【不正解の理由】Aは回帰テストや再テストを軽視している。Cはテストマネージャの責任を放棄している。Dは経験やデータに基づく見積りの原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-006">
+  <h3>TM-006</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.3.2では、機能横断的な欠陥マネジメントが説明されている。複数チームが関わる場合、共通の欠陥ワークフロー、分類基準、可視化により、組織全体の品質状況を把握し改善に活かす必要がある。<br>【不正解の理由】Aはテストマネージャの責任を放棄。Cはトレーサビリティと分析を不可能にする。Dはリスクベースの優先度付けの原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-007">
+  <h3>TM-007</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.1.1では、4つの能力領域として、(1)ソフトウェアシステムの使用、(2)ドメインおよびビジネスに関する知識、(3)システム開発領域、(4)ソフトウェアテスト、対人関係スキルが挙げられている。<br>【不正解の理由】Aは対人関係スキルが抜けている。CとDは一部のスキルのみに限定しており不十分である。</div>
+</div>
+<div class="answer" id="a-TM-008">
+  <h3>TM-008</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.2では、潜在的協力者（影響力が高い、関心が低い）として、日々のタスクには強い関心を持たないかもしれないが、リソース配置や高いレベルのプロジェクトの方向性に関する彼らの意思決定が重要であると説明されている。<br>【不正解の理由】Bは無関心者の説明。Cは推進者の説明。Dは擁護者の説明である。</div>
+</div>
+<div class="answer" id="a-TM-009">
+  <h3>TM-009</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.4.3では、スマートの法則のM（測定可能な）として、数値化可能で、達成状況を判断するための具体的な進捗基準を持っていなければならないと定義されている。<br>【不正解の理由】Aは具体的でなく曖昧。Cは達成可能（A）の原則に反する。Dは妥当性（R）の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-010">
+  <h3>TM-010</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.4では、ふりかえりとは、チームが自分たちのやり方とコラボレーションをレビューし、学んだ教訓を把握し、改善を達成するための変更と行動を決定するミーティングであると定義されている。<br>【不正解の理由】Aは人事評価でありふりかえりの目的ではない。Cは非難を招く。Dはふりかえりの主目的ではなく、改善の結果として導かれる可能性がある。</div>
+</div>
+<div class="answer" id="a-TM-011">
+  <h3>TM-011</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.1.1では、テスト計画はテスト目的、テストアプローチ、テストスコープ、テストリソース、テストスケジュール、テスト成果物、テスト参加者を定義すると説明されている。<br>【不正解の理由】Bはテスト実行の活動。Cはテストマネージャの責任範囲外。Dは早期計画の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-012">
+  <h3>TM-012</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.1.2では、テストコントロールはテスト計画書に対して実際の進捗を比較し、必要に応じて是正措置を実装し、テスト戦略とテスト目的を満たすように指針を示すと説明されている。<br>【不正解の理由】Bはテスト設計の活動。Cは開発の責任。Dはイテレーティブな再計画の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-013">
+  <h3>TM-013</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.1では、プロジェクトマネージャーやプロダクトオーナーは要件を仕様化し、求められる品質レベルを定義し、テスト結果に基づいて判定を行うと説明されている。<br>【不正解の理由】Aは開発者の関心。Cはテスト担当者の活動。Dは開発の責任である。</div>
+</div>
+<div class="answer" id="a-TM-014">
+  <h3>TM-014</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.3では、ハイブリッド環境では従来の方法論とアジャイル方法論の間を円滑に移行するためのチームの理解と能力を評価することが求められると説明されている。<br>【不正解の理由】Bはハイブリッドの柔軟性を無視。Cは計画の重要性に反する。Dはステークホルダー協調の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-015">
+  <h3>TM-015</h3>
+  <p class="correct-answer"><strong>正解: B</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.4の表1では、イテレーティブ開発モデルではイテレーションごとのストーリープランニングの一部としてイテレーティブな見積りを行うと説明されている。<br>【不正解の理由】Aはシーケンシャルモデルの特徴。Cはアジャイルの原則に反する。Dは現実的でない。</div>
+</div>
+<div class="answer" id="a-TM-016">
+  <h3>TM-016</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.5では、コンポーネントテストのスコープ、目的、完了基準を定義することがテストマネジメント活動として挙げられている。<br>【不正解の理由】Bはテストレベル全体の考慮に反する。Cは開発チームとの協力の原則に反する。Dは終了基準の重要性に反する。</div>
+</div>
+<div class="answer" id="a-TM-017">
+  <h3>TM-017</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.6では、非機能テストのマネジメントは性能やセキュリティといったシステム属性の検証を中心に展開すると説明されている。<br>【不正解の理由】Bは機能テストの説明。Cは非機能テストの重要性を無視。Dはツール活用のベストプラクティスに反する。</div>
+</div>
+<div class="answer" id="a-TM-018">
+  <h3>TM-018</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.1では、リスク分析（識別・アセスメント）とリスクコントロール（モニタリング・軽減）が主な活動として説明されている。<br>【不正解の理由】Bはリスクベースドテストの原則に反する。Cは高リスクへの重点配分に反する。Dは早期分析の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-019">
+  <h3>TM-019</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.2では、専門家へのインタビュー、過去の経験、リスクテンプレート、チェックリストなどが技法の例として挙げられている。<br>【不正解の理由】Bは体系的な分析に反する。Cは多様なステークホルダー関与の原則に反する。Dはリスクベースドテストに反する。</div>
+</div>
+<div class="answer" id="a-TM-020">
+  <h3>TM-020</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.3では、リスクレベルはリスク影響とリスク可能性によって決定されると説明されている。<br>【不正解の理由】B、C、Dは品質リスクの決定要因としてシラバスに記載されていない。</div>
+</div>
+<div class="answer" id="a-TM-021">
+  <h3>TM-021</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.5では、重量的な技法としてハザード分析、エクスポージャーコスト、FMEA、フォールトツリー解析が挙げられている。<br>【不正解の理由】B、Cは体系的な技法ではない。Dは重量的技法の説明に反する。</div>
+</div>
+<div class="answer" id="a-TM-022">
+  <h3>TM-022</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.6では、優先度の高い欠陥のほとんどがテスト実行の早い段階で発見されたかが成功メトリクスの質問として挙げられている。<br>【不正解の理由】B、C、Dはリスクベースドテストの成功に反する内容である。</div>
+</div>
+<div class="answer" id="a-TM-023">
+  <h3>TM-023</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.4.1では、静的テスト、動的テスト、テストレベル、テストタイプ、テスト技法の選択が重要な決定事項として挙げられている。<br>【不正解の理由】B、C、Dはテスト戦略の決定事項ではない。</div>
+</div>
+<div class="answer" id="a-TM-024">
+  <h3>TM-024</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.1では、診断フェーズで現在のテストプロセスをアセスメントし、改善の可能性を特定すると説明されている。<br>【不正解の理由】B、C、DはIDEALモデルの診断フェーズの内容ではない。</div>
+</div>
+<div class="answer" id="a-TM-025">
+  <h3>TM-025</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.2では、TPI NEXTは16のキーエリアを定義し、それぞれに4つの成熟度レベルがあると説明されている。<br>【不正解の理由】B、C、DはTPI NEXTの内容ではない。</div>
+</div>
+<div class="answer" id="a-TM-026">
+  <h3>TM-026</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.3では、根本原因分析、尺度・メトリクス・指標を用いた分析、GQMアプローチが例として挙げられている。<br>【不正解の理由】B、C、Dは分析ベースのアプローチではない。</div>
+</div>
+<div class="answer" id="a-TM-027">
+  <h3>TM-027</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.6.1では、ツール導入のベストプラクティスとして、パイロット実施や段階的導入が推奨されている。<br>【不正解の理由】B、C、Dはベストプラクティスに反する。</div>
+</div>
+<div class="answer" id="a-TM-028">
+  <h3>TM-028</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.6.2では、ツール選定時に技術的側面とビジネス的側面への影響を考慮することが求められている。<br>【不正解の理由】B、C、Dは適切な選定基準ではない。</div>
+</div>
+<div class="answer" id="a-TM-029">
+  <h3>TM-029</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.6.4では、ツールのライフサイクルには選定、導入、運用、退役などの段階があると説明されている。<br>【不正解の理由】B、C、Dはライフサイクルの全体像を表していない。</div>
+</div>
+<div class="answer" id="a-TM-030">
+  <h3>TM-030</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.6.5では、ツール利用によりメトリクスの収集と評価が改善されると説明されている。<br>【不正解の理由】B、C、Dはツール利用の利点に反する。</div>
+</div>
+<div class="answer" id="a-TM-031">
+  <h3>TM-031</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.1.1では、メトリクスはテスト計画、モニタリング、コントロール、完了の意思決定を支援するために使用されると説明されている。<br>【不正解の理由】B、C、Dはメトリクスの目的に反する。</div>
+</div>
+<div class="answer" id="a-TM-032">
+  <h3>TM-032</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.2.2では、プロダクトの複雑さ、品質リスク、リソース、SDLCモデルなどがテスト工数に影響する要因として挙げられている。<br>【不正解の理由】B、C、Dはテスト工数に影響する主要要因ではない。</div>
+</div>
+<div class="answer" id="a-TM-033">
+  <h3>TM-033</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.2.3では、経験が不足している場合、ワイドバンドデルファイ法などで専門家の意見を収集することが有効と説明されている。<br>【不正解の理由】B、C、Dは不確実性が高い状況での適切な技法ではない。</div>
+</div>
+<div class="answer" id="a-TM-034">
+  <h3>TM-034</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.3.1では、欠陥は新規、割り当て、修正、確認、クローズなどの状態を通過するライフサイクルを持つと説明されている。<br>【不正解の理由】B、C、Dは欠陥ライフサイクルの概念に反する。</div>
+</div>
+<div class="answer" id="a-TM-035">
+  <h3>TM-035</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.3.3では、アジャイルでは欠陥がバックログアイテムとして管理され、優先度に基づいて対応されると説明されている。<br>【不正解の理由】B、C、Dはアジャイルの欠陥マネジメントの原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-036">
+  <h3>TM-036</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.3.5では、欠陥の識別、ステータス、重大度、発生箇所、再現手順などが欠陥レポートに含まれる情報として挙げられている。<br>【不正解の理由】B、C、Dは欠陥分析に有用な情報ではない。</div>
+</div>
+<div class="answer" id="a-TM-037">
+  <h3>TM-037</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.1.3では、スキルアセスメントはチームの強みと弱みを分析し、スキル開発計画に活用するために行われる。<br>【不正解の理由】B、C、Dはスキルアセスメントの建設的な目的に反する。</div>
+</div>
+<div class="answer" id="a-TM-038">
+  <h3>TM-038</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.1.5では、コミュニケーション、リーダーシップ、コンフリクト解決、モチベーションなどがテストチームマネジメントに必要なスキルとして挙げられている。<br>【不正解の理由】B、C、Dはマネジメントスキルの範囲を適切に表していない。</div>
+</div>
+<div class="answer" id="a-TM-039">
+  <h3>TM-039</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.1.6では、明確な目標、成長機会、適切なフィードバック、チームでの協働などがモチベーションを上げる要因として挙げられている。<br>【不正解の理由】B、C、Dはモチベーションを下げる要因である。</div>
+</div>
+<div class="answer" id="a-TM-040">
+  <h3>TM-040</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.2.1では、品質コストは予防、評価、内部失敗、外部失敗の4カテゴリで分類されると説明されている。<br>【不正解の理由】B、C、Dは品質コストの4カテゴリを適切に表していない。</div>
+</div>
+<div class="answer" id="a-TM-041">
+  <h3>TM-041</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.2.2では、テストの費用対効果にはテストコスト、早期検出の利点、リリース後の失敗コストなどが関係すると説明されている。<br>【不正解の理由】B、C、Dはテストの費用対効果の主要要素ではない。</div>
+</div>
+<div class="answer" id="a-TM-042">
+  <h3>TM-042</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.7では、特定のプロジェクトを分析し、計画・モニタリング・コントロールに重点を置いた活動を決定することが求められる。ハイブリッドでは各モデルの開始・終了基準とトレーサビリティが重要である。<br>【不正解の理由】B、C、Dはテストマネジメントの基本活動を放棄している。</div>
+</div>
+<div class="answer" id="a-TM-043">
+  <h3>TM-043</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.4.2では、組織的戦略とプロジェクトコンテキストを分析し適切なアプローチを選択することが求められる。規制対象ではプロセス準拠が必須であり、リスクベースドで重点配分することで効率化できる。<br>【不正解の理由】B、C、Dは規制とリスクの両立を図れていない。</div>
+</div>
+<div class="answer" id="a-TM-044">
+  <h3>TM-044</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.4では、ふりかえりはデータ収集、インサイト生成、改善アクション決定などのステップで構成されると説明されている。<br>【不正解の理由】B、C、Dは建設的なふりかえりの原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-045">
+  <h3>TM-045</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.1.3では、テスト報告はステークホルダーのニーズに合わせ、理解しやすく関連性のある形で提供することが求められる。<br>【不正解の理由】B、C、Dは効果的な報告の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-046">
+  <h3>TM-046</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.3.6では、欠陥レポート情報を用いてプロセス改善アクションを定義することが求められる。根本原因が要件レビューであれば、その強化が適切である。<br>【不正解の理由】B、C、Dはデータに基づく改善に反する。</div>
+</div>
+<div class="answer" id="a-TM-047">
+  <h3>TM-047</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.2.2では、品質コストをベースに他の定量的・定性的要素を考慮して価値を見積り、ステークホルダーに伝えることが求められる。<br>【不正解の理由】B、C、Dは効果的な説明に反する。</div>
+</div>
+<div class="answer" id="a-TM-048">
+  <h3>TM-048</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.4では、リスクレベルに応じた適切なテスト活動の選択が求められる。高リスクの決済に重点を置き、低リスクのUIは効率化するのが適切である。<br>【不正解の理由】B、C、Dはリスクベースドテストの原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-049">
+  <h3>TM-049</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.6.3では、ツールの選択、カバーできるリスク、コスト、利点を考慮した計画を立てるために状況を分析することが求められる。<br>【不正解の理由】B、C、Dは適切な分析に基づく意思決定ではない。</div>
+</div>
+<div class="answer" id="a-TM-050">
+  <h3>TM-050</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.2.3では、組織のデータがある部分はそれを活用し、不確実な部分は専門家の意見を収集する技法を組み合わせることが有効と説明されている。<br>【不正解の理由】B、C、Dは状況に応じた適切な技法選択ではない。</div>
+</div>
+<div class="answer" id="a-TM-051">
+  <h3>TM-051</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.1.3では、学んだ教訓はふりかえりで実施・収集・文書化し、テストプロセス改善に利用できると説明されている。<br>【不正解の理由】B、C、Dは学んだ教訓の活用に反する。</div>
+</div>
+<div class="answer" id="a-TM-052">
+  <h3>TM-052</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.2では、擁護者は定期的な報告や特定の議論への関与を通じて関心を維持できると説明されている。<br>【不正解の理由】B、C、Dは適切なステークホルダー対応ではない。</div>
+</div>
+<div class="answer" id="a-TM-053">
+  <h3>TM-053</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.4の表1では、イテレーティブモデルでは受け入れ基準と完了の定義に重点を置き、文書化は最小限とすると説明されている。<br>【不正解の理由】B、C、Dはアジャイルの軽量文書化の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-054">
+  <h3>TM-054</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.5では、受け入れテストではステークホルダーと協力し、受け入れ基準の充足をレビュー・確認し、UATをマネジメントすることが求められる。<br>【不正解の理由】B、C、Dは受け入れテストの原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-055">
+  <h3>TM-055</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.6では、機能テストのマネジメントはすべての機能性が徹底的にテストされ、定義した要件を満たしていることを確認することに重点を置くと説明されている。<br>【不正解の理由】B、C、Dは機能テストの目的に反する。</div>
+</div>
+<div class="answer" id="a-TM-056">
+  <h3>TM-056</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.1では、最も効果的にするためにはリスク分析に多様なステークホルダーを含めるべきであると説明されている。<br>【不正解の理由】B、C、Dは多様なステークホルダー関与の利点を無視している。</div>
+</div>
+<div class="answer" id="a-TM-057">
+  <h3>TM-057</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.5では、軽量的な技法としてPRAM、PRISMA、SSTなどが挙げられている。<br>【不正解の理由】B、Cは重量的技法。Dは軽量技法の説明に反する。</div>
+</div>
+<div class="answer" id="a-TM-058">
+  <h3>TM-058</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.4.3では、R（妥当な）として、プロジェクト全体の目的に沿ったものでなければならないと定義されている。<br>【不正解の理由】B、C、Dはスマートの法則の各要素に反する。</div>
+</div>
+<div class="answer" id="a-TM-059">
+  <h3>TM-059</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.2では、TMMiは5つの成熟度レベルで構成され、各レベルにテストプロセス領域と改善ゴールが含まれると説明されている。<br>【不正解の理由】B、C、DはTMMiの説明に反する。</div>
+</div>
+<div class="answer" id="a-TM-060">
+  <h3>TM-060</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.3では、GQMは測定ゴールを定義し、質問に洗練し、メトリクスを選択するフレームワークであると説明されている。<br>【不正解の理由】B、C、DはGQMの原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-061">
+  <h3>TM-061</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.1.2では、テスト作業成果物やリソースの状況を計画書や戦略の目的に関連付けるための尺度や目標値が枠組みに含まれると説明されている。<br>【不正解の理由】B、C、Dは効果的なコントロールに反する。</div>
+</div>
+<div class="answer" id="a-TM-062">
+  <h3>TM-062</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.2.2では、ドメインの複雑さ、新技術、チームの経験、環境などがテスト工数に影響する要因として挙げられている。<br>【不正解の理由】B、C、Dはテスト工数に影響する主要要因ではない。</div>
+</div>
+<div class="answer" id="a-TM-063">
+  <h3>TM-063</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.3.4では、ハイブリッド開発では異なるモデル間で欠陥ワークフローを調整する課題があると説明されている。<br>【不正解の理由】B、C、Dは現実的な課題認識に反する。</div>
+</div>
+<div class="answer" id="a-TM-064">
+  <h3>TM-064</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.1.4では、スキルアセスメントの結果に基づき、トレーニングとスキル開発計画を策定することが求められる。<br>【不正解の理由】B、C、Dは効果的なスキル開発に反する。</div>
+</div>
+<div class="answer" id="a-TM-065">
+  <h3>TM-065</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.1.6では、曖昧な目標、成長機会の欠如、不当な批判などがモチベーションを下げる要因として挙げられている。<br>【不正解の理由】B、C、Dはモチベーションを上げる要因である。</div>
+</div>
+<div class="answer" id="a-TM-066">
+  <h3>TM-066</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.2.4の表1では、イテレーティブモデルではCI/CDにおける自動リグレッションに重点を置き、初期段階から組み込まれると説明されている。<br>【不正解の理由】B、C、Dはアジャイルのテスト自動化の特徴に反する。</div>
+</div>
+<div class="answer" id="a-TM-067">
+  <h3>TM-067</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.6では、リスクレベルのアセスメントの困難さ、適切な開始の軽視、デジャブ、重要なリスクの見逃しなどが困難として挙げられている。<br>【不正解の理由】B、C、Dはシラバスに記載された主要な困難ではない。</div>
+</div>
+<div class="answer" id="a-TM-068">
+  <h3>TM-068</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.4.2では、ドメイン、組織のゴール、プロジェクトのゴール、テストリソース、SDLCモデル、他システムとのインターフェース、テストデータの可用性などが分析すべき要因として挙げられている。<br>【不正解の理由】B、C、Dはテストアプローチ選択の主要要因ではない。</div>
+</div>
+<div class="answer" id="a-TM-069">
+  <h3>TM-069</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.5.1では、行動フェーズで改善計画を実装し、トレーニング、パイロット、展開を行うと説明されている。<br>【不正解の理由】B、C、Dは行動フェーズの目的に反する。</div>
+</div>
+<div class="answer" id="a-TM-070">
+  <h3>TM-070</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.1.2では、ステークホルダーにとって理解しやすく関連性のある形でテスト状況を伝えることが重要と説明されている。<br>【不正解の理由】B、C、Dは効果的な報告に反する。</div>
+</div>
+<div class="answer" id="a-TM-071">
+  <h3>TM-071</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.2.3では、ファンクションポイントは機能要件が明確な場合に規模ベースの見積りに活用できると説明されている。<br>【不正解の理由】B、C、Dはファンクションポイント法の適用条件に反する。</div>
+</div>
+<div class="answer" id="a-TM-072">
+  <h3>TM-072</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス2.3.2では、複数チームが関わる場合、組織横断的な欠陥情報の共有により品質状況を把握し改善に活かすことが重要と説明されている。<br>【不正解の理由】B、C、Dは機能横断的マネジメントの価値を無視している。</div>
+</div>
+<div class="answer" id="a-TM-073">
+  <h3>TM-073</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス3.1.1では、ソフトウェアテストの能力領域にテスト技法、設計、自動化、欠陥管理などのスキルが含まれる。<br>【不正解の理由】B、C、Dはソフトウェアテストの能力領域に含まれない。</div>
+</div>
+<div class="answer" id="a-TM-074">
+  <h3>TM-074</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.1.1では、テスト計画は開発プロセスのできるだけ早い段階、できれば要件を識別する前に開始すべきであると説明されている。<br>【不正解の理由】B、C、Dは早期計画の原則に反する。</div>
+</div>
+<div class="answer" id="a-TM-075">
+  <h3>TM-075</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.4では、縦型探索は高リスクのテストを低リスクより先に実行し、最も高いレベルのリスクを早期に軽減するアプローチと説明されている。<br>【不正解の理由】B、C、Dは縦型探索の説明に反する。</div>
+</div>
+<div class="answer" id="a-TM-076">
+  <h3>TM-076</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.3.4では、横型探索は各リスクに少なくとも1つのテストを割り当て、ステークホルダーが全体像を早期に把握したい場合に適していると説明されている。<br>【不正解の理由】B、C、Dは横型探索の説明に反する。</div>
+</div>
+<div class="answer" id="a-TM-077">
+  <h3>TM-077</h3>
+  <p class="correct-answer"><strong>正解: A</strong></p>
+  <div class="explanation">【正解の理由】シラバス1.1.2では、テストモニタリングにはテスト結果の収集・記録、逸脱の識別、新たなリスクの識別・分析、リスク変更のモニタリングが含まれる。<br>【不正解の理由】B、C、Dはモニタリングの活動に反する。</div>
+</div></main>
+
+  <footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+    <p>JSTQB® / ISTQB® は International Software Testing Qualifications Board の登録商標です。</p>
+    <p>本書はJSTQB®から認定を受けた書籍ではありません。</p>
+  </footer>
+</body>
+</html>

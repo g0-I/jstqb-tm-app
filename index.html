@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSTQB TM試験対策 - テストマネージャ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>JSTQB TM試験対策</h1>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      <span class="progress-text" id="progressText">0 / 0</span>
+    </div>
+    <div class="filter-bar">
+      <label for="chapterFilter">章でフィルタ：</label>
+      <select id="chapterFilter">
+        <option value="">すべて</option>
+      </select>
+      <label class="checkbox-label">
+        <input type="checkbox" id="randomOrder" checked> ランダム出題
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" id="wrongOnly"> 間違えた問題のみ
+      </label>
+      <button type="button" class="btn-clear" id="btnClearWrong" title="間違えた問題の記録をクリア">記録をクリア</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="question-section" id="questionSection">
+      <div class="meta-info" id="metaInfo"></div>
+      <div class="scenario" id="scenario"></div>
+      <h2 class="question" id="question"></h2>
+      <div class="options" id="options"></div>
+      <div class="result" id="result"></div>
+      <div class="explanation" id="explanation"></div>
+      <button type="button" class="btn-next" id="btnNext" disabled>次の問題へ</button>
+    </section>
+
+    <section class="complete-section" id="completeSection" hidden>
+      <h2>お疲れ様でした</h2>
+      <div class="stats" id="completeStats"></div>
+      <p id="completeMessage"></p>
+      <div class="complete-actions">
+        <button type="button" class="btn-restart" id="btnRestart">最初からやり直す</button>
+        <button type="button" class="btn-wrong" id="btnRetryWrong" hidden>間違えた問題を再挑戦</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>JSTQB Advanced Level テストマネジメント シラバス V3.0 準拠</p>
+  </footer>
+
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
