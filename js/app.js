@@ -10,6 +10,7 @@
 
   const STORAGE_KEY_WRONG = 'jstqb-tm-wrong';
   const STORAGE_KEY_FILTER = 'jstqb-tm-filter';
+  const STORAGE_KEY_KLEVEL = 'jstqb-tm-klevel';
 
   let questions = [];
   let filteredQuestions = [];
@@ -22,13 +23,13 @@
     progressBar: document.getElementById('progressBar'),
     progressText: document.getElementById('progressText'),
     chapterFilter: document.getElementById('chapterFilter'),
+    kLevelFilter: document.getElementById('kLevelFilter'),
     randomOrder: document.getElementById('randomOrder'),
     wrongOnly: document.getElementById('wrongOnly'),
     questionSection: document.getElementById('questionSection'),
     completeSection: document.getElementById('completeSection'),
     metaInfo: document.getElementById('metaInfo'),
-    scenario: document.getElementById('scenario'),
-    question: document.getElementById('question'),
+    questionText: document.getElementById('questionText'),
     options: document.getElementById('options'),
     result: document.getElementById('result'),
     explanation: document.getElementById('explanation'),
@@ -67,8 +68,64 @@
   }
 
   function getChapters() {
-    const chapters = [...new Set(questions.map(q => q.chapter))].sort();
-    return chapters;
+    return [...new Set(questions.map(q => q.chapter))].sort();
+  }
+
+  function getKLevels() {
+    return [...new Set(questions.map(q => q.kLevel))].sort();
+  }
+
+  function countByFilter(baseQuestions, key, value) {
+    return baseQuestions.filter(q => q[key] === value).length;
+  }
+
+  function buildFilterOptions(selectEl, key, values, currentValue, baseQuestions, totalCount) {
+    selectEl.innerHTML = '';
+    const allOpt = document.createElement('option');
+    allOpt.value = '';
+    allOpt.textContent = `すべて（${totalCount}問）`;
+    selectEl.appendChild(allOpt);
+
+    values.forEach(val => {
+      const count = countByFilter(baseQuestions, key, val);
+      const opt = document.createElement('option');
+      opt.value = val;
+      opt.textContent = `${val}（${count}問）`;
+      selectEl.appendChild(opt);
+    });
+
+    if (currentValue && values.includes(currentValue)) {
+      selectEl.value = currentValue;
+    }
+  }
+
+  function updateFilterCounts() {
+    try {
+      const selectedChapter = elements.chapterFilter.value;
+      const selectedKLevel = elements.kLevelFilter.value;
+
+      let baseForChapter = [...questions];
+      if (selectedKLevel) {
+        baseForChapter = baseForChapter.filter(q => q.kLevel === selectedKLevel);
+      }
+      if (elements.wrongOnly.checked) {
+        const wrong = getWrongAnswers();
+        baseForChapter = baseForChapter.filter(q => wrong.includes(q.id));
+      }
+      buildFilterOptions(elements.chapterFilter, 'chapter', getChapters(), selectedChapter, baseForChapter, baseForChapter.length);
+
+      let baseForKLevel = [...questions];
+      if (selectedChapter) {
+        baseForKLevel = baseForKLevel.filter(q => q.chapter === selectedChapter);
+      }
+      if (elements.wrongOnly.checked) {
+        const wrong = getWrongAnswers();
+        baseForKLevel = baseForKLevel.filter(q => wrong.includes(q.id));
+      }
+      buildFilterOptions(elements.kLevelFilter, 'kLevel', getKLevels(), selectedKLevel, baseForKLevel, baseForKLevel.length);
+    } catch (e) {
+      console.error('フィルタカウント更新エラー:', e);
+    }
   }
 
   function applyFilters() {
@@ -77,6 +134,11 @@
     const chapter = elements.chapterFilter.value;
     if (chapter) {
       result = result.filter(q => q.chapter === chapter);
+    }
+
+    const kLevel = elements.kLevelFilter.value;
+    if (kLevel) {
+      result = result.filter(q => q.kLevel === kLevel);
     }
 
     if (elements.wrongOnly.checked) {
@@ -89,6 +151,7 @@
     }
 
     filteredQuestions = result;
+    updateFilterCounts();
   }
 
   function updateProgress() {
@@ -192,8 +255,12 @@
     answered = false;
 
     elements.metaInfo.textContent = `${q.id} | ${q.chapter} | ${q.kLevel} | シラバス: ${q.syllabusRef}`;
-    elements.scenario.textContent = q.scenario || '';
-    elements.question.textContent = q.question || '';
+    const scenario = (q.scenario || '').trim();
+    const question = (q.question || '').trim();
+    const combined = scenario
+      ? scenario + (scenario.endsWith('。') ? '' : '。') + '\n\n' + 'この状況において、' + question
+      : question;
+    elements.questionText.textContent = combined;
     elements.result.hidden = true;
     elements.explanation.hidden = true;
     elements.btnNext.disabled = true;
@@ -207,28 +274,34 @@
     renderQuestion();
   }
 
-  function initChapterFilter() {
-    const chapters = getChapters();
-    elements.chapterFilter.innerHTML = '<option value="">すべて</option>';
-    chapters.forEach(ch => {
-      const opt = document.createElement('option');
-      opt.value = ch;
-      opt.textContent = ch;
-      elements.chapterFilter.appendChild(opt);
-    });
-
+  function initFilters() {
+    updateFilterCounts();
     try {
-      const saved = localStorage.getItem(STORAGE_KEY_FILTER);
-      if (saved && chapters.includes(saved)) {
-        elements.chapterFilter.value = saved;
+      const savedChapter = localStorage.getItem(STORAGE_KEY_FILTER);
+      if (savedChapter && getChapters().includes(savedChapter)) {
+        elements.chapterFilter.value = savedChapter;
       }
-    } catch (e) {}
+      const savedK = localStorage.getItem(STORAGE_KEY_KLEVEL);
+      if (savedK && getKLevels().includes(savedK)) {
+        elements.kLevelFilter.value = savedK;
+      }
+    } catch (e) {
+      console.error('フィルタ初期化エラー:', e);
+    }
+    updateFilterCounts();
   }
 
   function initEventListeners() {
     elements.chapterFilter.addEventListener('change', () => {
       try {
         localStorage.setItem(STORAGE_KEY_FILTER, elements.chapterFilter.value);
+      } catch (e) {}
+      startQuiz();
+    });
+
+    elements.kLevelFilter.addEventListener('change', () => {
+      try {
+        localStorage.setItem(STORAGE_KEY_KLEVEL, elements.kLevelFilter.value);
       } catch (e) {}
       startQuiz();
     });
@@ -272,7 +345,7 @@
       questions = [];
     }
 
-    initChapterFilter();
+    initFilters();
     initEventListeners();
     startQuiz();
   }

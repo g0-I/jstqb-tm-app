@@ -14,8 +14,12 @@
       <span class="progress-text" id="progressText">0 / 0</span>
     </div>
     <div class="filter-bar">
-      <label for="chapterFilter">章でフィルタ：</label>
+      <label for="chapterFilter">章：</label>
       <select id="chapterFilter">
+        <option value="">すべて</option>
+      </select>
+      <label for="kLevelFilter">知識レベル：</label>
+      <select id="kLevelFilter">
         <option value="">すべて</option>
       </select>
       <label class="checkbox-label">
@@ -31,8 +35,7 @@
   <main class="main">
     <section class="question-section" id="questionSection">
       <div class="meta-info" id="metaInfo"></div>
-      <div class="scenario" id="scenario"></div>
-      <h2 class="question" id="question"></h2>
+      <p class="question-text" id="questionText"></p>
       <div class="options" id="options"></div>
       <div class="result" id="result"></div>
       <div class="explanation" id="explanation"></div>

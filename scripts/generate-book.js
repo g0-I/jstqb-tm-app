@@ -52,8 +52,7 @@ function generateProblemsSection(questions) {
       html += `
 <div class="problem" id="q-${q.id}">
   <div class="meta">${q.id} | ${q.kLevel} | シラバス: ${q.syllabusRef}</div>
-  <div class="scenario">${escapeHtml(q.scenario)}</div>
-  <p class="question">${escapeHtml(q.question)}</p>
+  ${(q.scenario || '').trim() ? `<div class="scenario">${escapeHtml(q.scenario)}</div>\n  ` : ''}<p class="question">${escapeHtml((q.scenario || '').trim() ? 'この状況において、' + q.question : q.question)}</p>
   <ul class="options">
     <li>A. ${escapeHtml(q.options.A)}</li>
     <li>B. ${escapeHtml(q.options.B)}</li>

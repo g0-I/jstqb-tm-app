@@ -139,20 +139,11 @@ body {
   margin-bottom: 1rem;
 }
 
-.scenario {
-  background: var(--color-bg);
-  padding: 1rem;
-  border-radius: 6px;
-  margin-bottom: 1.25rem;
-  font-size: 0.9375rem;
-  border-left: 4px solid var(--color-primary);
-}
-
-.question {
-  font-size: 1.0625rem;
-  font-weight: 600;
+.question-text {
+  font-size: 1rem;
   margin: 0 0 1.25rem 0;
-  line-height: 1.5;
+  line-height: 1.7;
+  white-space: pre-line;
 }
 
 /* 選択肢（4択） */
