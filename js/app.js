@@ -338,12 +338,21 @@
     } catch (e) {}
   }
 
-  function init() {
-    if (typeof QUESTIONS !== 'undefined') {
-      questions = QUESTIONS;
-    } else {
-      questions = [];
+  async function loadQuestions() {
+    try {
+      const res = await fetch('data/questions.json');
+      if (res.ok) {
+        const data = await res.json();
+        return Array.isArray(data) ? data : [];
+      }
+    } catch (e) {
+      console.warn('data/questions.json の読み込みに失敗しました。questions.js を使用します。', e);
     }
+    return typeof QUESTIONS !== 'undefined' ? QUESTIONS : [];
+  }
+
+  async function init() {
+    questions = await loadQuestions();
 
     initFilters();
     initEventListeners();

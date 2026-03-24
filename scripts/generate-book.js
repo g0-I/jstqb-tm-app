@@ -1,14 +1,13 @@
 /**
  * JSTQB TM問題集 - Kindle用書籍HTML生成スクリプト
  * 実行: node scripts/generate-book.js
+ * 問題データは data/questions.json を参照する（単一の情報源）
  */
 const fs = require('fs');
 const path = require('path');
 
-// questions.jsを読み込み（CommonJS形式でエクスポートされている前提）
-const questionsPath = path.join(__dirname, '../js/questions.js');
-const questionsModule = require('../js/questions.js');
-const QUESTIONS = questionsModule;
+const jsonPath = path.join(__dirname, '../data/questions.json');
+const QUESTIONS = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -151,8 +150,4 @@ const outDir = path.join(__dirname, '../book');
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, 'JSTQB-TM-問題集.html'), html, 'utf8');
 
-// questions.json も同期
-fs.writeFileSync(path.join(__dirname, '../data/questions.json'), JSON.stringify(QUESTIONS, null, 2), 'utf8');
-
 console.log(`Generated: book/JSTQB-TM-問題集.html (${QUESTIONS.length} questions)`);
-console.log('Synced: data/questions.json');
